@@ -1,0 +1,57 @@
+# AWS EC2 Website Mini Project
+
+## Project Overview
+This project shows how to host a simple website on Amazon Web Services (AWS) using an EC2 instance and NGINX web server.
+
+The goal of this project is to understand basic cloud concepts such as servers, security groups, and web hosting.
+
+---
+
+## Services Used
+- Amazon EC2
+- Amazon Linux
+- NGINX
+- Security Groups
+- Default VPC
+
+---
+
+## Project Architecture
+User → Internet → EC2 (Public Subnet) → NGINX → Website
+
+---
+
+## Steps Taken
+1. Created an EC2 instance using Amazon Linux (Free Tier).
+2. Configured a security group to allow:
+   - SSH (Port 22) from my IP
+   - HTTP (Port 80) from anywhere
+3. Connected to the EC2 instance using SSH.
+4. Installed and started the NGINX web server.
+5. Deployed a simple HTML website.
+6. Tested the website using the EC2 public IP.
+
+---
+
+## Result
+The website was successfully hosted and accessible through a web browser using the EC2 public IP address.
+
+---
+
+## Security Measures
+- SSH access was restricted to my IP address.
+- Only HTTP traffic was allowed publicly.
+- No sensitive credentials were shared or stored in the repository.
+
+---
+
+## Cleanup
+All AWS resources used in this project were stopped or terminated after testing to avoid unnecessary charges.
+
+---
+
+## What I Learned
+- How to launch and manage an EC2 instance
+- Basic Linux commands
+- How security groups work
+- How to host a website using NGINX on AWS
