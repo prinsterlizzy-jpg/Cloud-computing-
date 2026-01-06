@@ -1,0 +1,40 @@
+Project Title
+
+Automated and Scalable Website Using AWS
+Project Description
+
+This project demonstrates how to deploy a simple website on AWS using cloud best practices.
+The website runs on EC2, installs NGINX automatically using User Data, and scales automatically based on traffic with Auto Scaling and Load Balancer. CloudWatch is used for monitoring.
+Services Used
+	•	Amazon EC2
+	•	User Data
+	•	Security Groups
+	•	Application Load Balancer
+	•	Auto Scaling
+	•	Amazon CloudWatch
+How the Project Works
+	1.	A user accesses the website through a Load Balancer.
+	2.	Traffic is routed to EC2 instances.
+	3.	User Data automatically installs and starts NGINX on each EC2.
+	4.	CloudWatch monitors CPU usage.
+	5.	Auto Scaling adds or removes EC2 instances based on traffic.
+User Data Script
+#!/bin/bash
+yum update -y
+yum install nginx -y
+systemctl start nginx
+systemctl enable nginx
+echo "<h1>Welcome! This server was set up automatically using AWS User Data.</h1>" > /usr/share/nginx/html/index.html
+Security
+	•	IAM is used to control access
+	•	Security Groups restrict traffic
+	•	Root account is not used
+Outcome
+	•	Automated server setup
+	•	High availability
+	•	Scalable infrastructure
+	•	Beginner-friendly cloud project
+Author
+
+Bukola
+Cloud Engineering Beginner
